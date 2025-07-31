@@ -20,6 +20,10 @@ jobs:
           SONAR_ARCHITECTURE_EXPORT_GRAPHS: true
           SONAR_ARCHITECTURE_EXPORT_FLAVOR: true
           SONAR_ARCHITECTURE_EXPORT_ISSUES: true
+          SONAR_ARCHITECTURE_VISUALIZATION_ENABLED: false
+          SONAR_ARCHITECTURE_ENABLE: true
+          SONAR_ARCHITECTURE_PREVIEW_ENABLE: true
+          SONAR_ARCHITECTURE_PREVIEW_AVAILABLE: true
       - name: Store dna xml & json files
         uses: actions/upload-artifact@v4
         with:
