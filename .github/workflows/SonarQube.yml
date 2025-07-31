@@ -24,6 +24,17 @@ jobs:
           SONAR_ARCHITECTURE_ENABLE: true
           SONAR_ARCHITECTURE_PREVIEW_ENABLE: true
           SONAR_ARCHITECTURE_PREVIEW_AVAILABLE: true
+        with:
+          args: >
+            -Dsonar.c.file.suffixes=-
+            -Dsonar.cpp.file.suffixes=-
+            -Dsonar.objc.file.suffixes=-
+            -Dsonar.architecture.visualization.enabled=false 
+            -Dsonar.architecture.enable=true 
+            -Dsonar.architecture.preview.enable=true 
+            -Dsonar.architecture.preview.available=true
+            -Dsonar.sources=src
+            -Dsonar.tests=test
       - name: Store dna xml & json files
         uses: actions/upload-artifact@v4
         with:
